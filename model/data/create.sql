@@ -4,6 +4,7 @@ CREATE TABLE annonces (
   auteur STRING,
   titre STRING,
   categorie STRING
+  localisation STRING
 );
 */
 
