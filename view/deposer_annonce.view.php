@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="../view/css/deposer_annonce.view.styles.css" />
-  <title>Gzer - annonces</title>
+  <title>Gzer - déposer une annonce</title>
 </head>
 <body>
   <div class="topnav">
     <a href="#home">GZER</a>
-    <a href="#boutique">Déposer une annonce</a>
-    <a class="active" href="#annonces">Annonces</a>
+    <a class="active" href="#boutique">Déposer une annonce</a>
+    <a href="#annonces">Annonces</a>
     <a href="#se_connecter">Se connecter</a>
   </div>
 
@@ -20,11 +20,13 @@
   </div>
 
   <div id=container style="padding-left:16px">
-    <br><br>
-    Que recherchez-vous ?
+
+    <h2>Déposer une annonce</h2>
+
+    <h3>Votre annonce</h3>
+    Catégorie
     <br><br>
     <form action="">
-      <input type="text" name="mot-cle" value=""><br><br>
       <select id="categorie" name="categorie">
         <option value="prestation">Prestation</option>
         <option value="casques_enceintes">Casques et enceintes</option>
@@ -34,9 +36,18 @@
       </select>
       <br><br>
 
-      <input type="submit" name="" value="Valider la recherche">
+      Titre de l'annonce <br>
+      <input type="text" name="titre" value=""><br><br>
+      Prix <br>
+      <input type="text" name="prix" value=""><br><br>
+      Adresse à Grenoble <br>
+      <input type="text" name="adresse" value=""><br>
+
+      <br><br>
+
+      <input type="submit" name="" value="Valider l'annonce">
     </form>
-    <br><br>
-    <h2>Toutes les annonces</h2>
-  </body>
-  </html>
+  </div>
+
+</body>
+</html>

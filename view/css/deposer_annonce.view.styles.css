@@ -63,11 +63,3 @@ body {
 #container{
   overflow:auto;
 }
-
-#map{
-  float:left;
-}
-
-#artistes{
-  float:right;
-}​
