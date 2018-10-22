@@ -1,12 +1,4 @@
 <?php
-abstract class Annonce {
-  private $numA;
-  private $titreA;
-  private $prixA;
-  private $localisation;
-  private $auteurA;
-  private $dateA;
-
 /*
   public function __construct($numA, $titreA, $prixA, $localisation, $auteurA, $dateA){
     $this->numA = $numA;
@@ -18,35 +10,39 @@ abstract class Annonce {
   }
 */
 
-  public function getTitre() {
-    return $this->titreA;
-  }
-}
-
-class AnnonceMat extends Annonce {
+class AnnonceMat {
+  private $numAM;
   private $categorieAM;
+  private $titreAM;
+  private $prixAM;
+  private $localisationAM;
+  private $auteurAM;
+  private $dateAM;
 
-/*
-  public function __construct($numA, $titreA, $prixA, $localisation, $auteurA, $dateA, $categorieAM){
-    parent::construct($numA, $titreA, $prixA, $localisation, $auteurA, $dateA);
-    $this->categorieAM = $categorieAM;
+  public function getTitreAM() {
+    return $this->titreAM;
   }
-*/
 
+  public function getAuteurAM() {
+    return $this->auteurAM;
+  }
 }
 
-class AnnoncePrest extends Annonce {
+class AnnoncePrest {
+  private $numAP;
+  private $titreAP;
   private $styleAP;
+  private $prixAP;
+  private $localisationAP;
+  private $auteurAP;
+  private $dateAP;
 
-/*
-  public function __construct($numA, $titreA, $prixA, $localisation, $auteurA, $dateA, $styleAP){
-    parent::construct($numA, $titreA, $prixA, $localisation, $auteurA, $dateA);
-    $this->styleAP = $styleAP;
+  public function getTitreAP() {
+    return $this->titreAP;
   }
-*/
 
-  public function getStyle() {
-    return $this->styleAP;
+  public function getAuteurAP() {
+    return $this->auteurAP;
   }
 
 }

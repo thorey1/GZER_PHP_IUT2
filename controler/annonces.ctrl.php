@@ -17,14 +17,14 @@ if (isset($_GET['categorie'])) {
 //////////////////////////////////////////////////////////////////////////////
 // PARTIE USAGE DU MODELE
 //////////////////////////////////////////////////////////////////////////////
-if ($categorie = 'Prestation') {
+
+if ($categorie = 'prestation') {
   $config = parse_ini_file('../config/config.ini');
   $annonces = new GzerDAO($config['database_path']);
 
   for ($i=1; $i <= 6; $i++) {
     $AP = $annonces->getAnnonceP($i);
-    var_dump($AP);
-    $listAP[$i] = $AP->getTitre();
+    $listAP[$i] = $AP->getAuteurAP().' - '.$AP->getTitreAP();
   }
 } else if ($categorie = '') {
   $config = parse_ini_file('../config/config.ini');
@@ -33,15 +33,13 @@ if ($categorie = 'Prestation') {
   for ($i=1; $i <= 6; $i++) {
     $AP = $annonces->getAnnonceP($i);
     var_dump($AP);
-    $listAP[$i] = $AP->getTitre();
+    $listAP[$i] = $AP->getTitreAP();
     $AM = $annonces->getAnnonceM($i);
-    $listAM[$i] = $AM->getTitre();
+    $listAM[$i] = $AM->getTitreAM();
   }
 } else {
-
+  echo 'ya r';
 }
-
-//problème : les attibuts privés n'ont pas la valeur des attributs de la table
 
 //////////////////////////////////////////////////////////////////////////////
 // PARTIE USAGE DE LA VUE
