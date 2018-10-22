@@ -27,7 +27,7 @@ try {
 
 
 
-      public function get(int $num): Music {
+      public function get(int $num): Membre {
         $req = "SELECT * FROM membres WHERE num='$num'";
         $sth=$this->db->query($req);
 
