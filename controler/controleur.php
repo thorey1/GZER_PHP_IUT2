@@ -39,7 +39,7 @@ function loadAnnoncesPrest(): array {
   while (($ligne = fgets($fichier)) !== false)  {
     $ligne = rtrim($ligne,"\n");
     $infos = explode("|", $ligne);
-    $nvannonce = new Annonce($infos[0],
+    $nvannonce = new AnnoncePrest($infos[0],
                         $infos[1],
                         $infos[2],
                         $infos[4],
@@ -58,7 +58,7 @@ function loadAnnoncesMat(): array {
   while (($ligne = fgets($fichier)) !== false)  {
     $ligne = rtrim($ligne,"\n");
     $infos = explode("|", $ligne);
-    $nvannonce = new Annonce($infos[0],
+    $nvannonce = new AnnonceMat($infos[0],
                         $infos[1],
                         $infos[2],
                         $infos[4],
