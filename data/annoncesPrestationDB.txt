@@ -1,0 +1,6 @@
+Animation bar/café|50|Villeneuve - Village Olympique|TostonRem
+Concert|200|Mistral|Koba LaD
+Studio|100|Europole|Maybach music
+Showcase|400|Teisseire|Salva
+Concert|200|Alpexpo-Grand'Place|6ix9euf
+Concert|6|Alpexpo-Grand'Place|Yvitoz
