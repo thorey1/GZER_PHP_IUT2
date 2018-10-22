@@ -23,7 +23,7 @@
     <br><br>
     Que recherchez-vous ?
     <br><br>
-    <form action="">
+    <form action="annonces.ctrl.php">
       <input type="text" name="mot-cle" value=""><br><br>
       <select id="categorie" name="categorie">
         <option value="prestation">Prestation</option>
@@ -38,5 +38,16 @@
     </form>
     <br><br>
     <h2>Toutes les annonces</h2>
+
+    <?php if(isset($listAP)) {foreach ($listAP as $annonceP) { ?>
+      <a href="#"><?= $annonceP ?></a>
+      <br>
+    <?php } } ?>
+
+    <?php if(isset($listAM)) {foreach ($listAM as $annonceM) { ?>
+      <a href="#"><?= $annonceM ?></a>
+      <br>
+    <?php } } ?>
+
   </body>
   </html>
