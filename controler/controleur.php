@@ -16,7 +16,12 @@ function afficherAnnonces () {
 }
 
 function filtrerAnnonce($categorie, $localisation): array {
-  $annonces = loadAnnonces();
+if ($categorie=='prestation'){
+  $annonces = loadAnnoncesPrest();
+}
+else if($categorie=='prestation'){
+  $annonces = loadAnnoncesMat();
+}
   $annoncesFiltrés = array();
 
   foreach ($annonces as $value) {
@@ -25,5 +30,43 @@ function filtrerAnnonce($categorie, $localisation): array {
     }
   }
   return $annoncesFiltrés
+}
+
+function loadAnnoncesPrest(): array {
+  $fichier = fopen("...", "r");
+  $tableauprest = array();
+  if ($fichier){
+  while (($ligne = fgets($fichier)) !== false)  {
+    $ligne = rtrim($ligne,"\n");
+    $infos = explode("|", $ligne);
+    $nvannonce = new Annonce($infos[0],
+                        $infos[1],
+                        $infos[2],
+                        $infos[4],
+                        $infos[5]);
+    $tableauprest [$infos[0]]= $nvannonce;
+  }
+  fclose($fichier);
+}
+  return $tableauprest;
+}
+
+function loadAnnoncesMat(): array {
+  $fichier = fopen("...", "r");
+  $tableaumat = array();
+  if ($fichier){
+  while (($ligne = fgets($fichier)) !== false)  {
+    $ligne = rtrim($ligne,"\n");
+    $infos = explode("|", $ligne);
+    $nvannonce = new Annonce($infos[0],
+                        $infos[1],
+                        $infos[2],
+                        $infos[4],
+                        $infos[5]);
+    $tableaumat [$infos[0]]= $nvannonce;
+  }
+  fclose($fichier);
+}
+  return $tableaumat;
 }
  ?>
