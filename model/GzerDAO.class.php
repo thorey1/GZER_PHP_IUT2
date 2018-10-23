@@ -32,5 +32,13 @@ class GzerDAO {
 
     return $result[0];
   }
+
+  public function getMembre(int $numM):Membre{
+    $req = "SELECT * FROM membres WHERE numM='$numM'";
+    $st = $this->getDb()->query($req);
+    $result=$st->fetchAll(PDO::FETCH_CLASS, 'Membre');
+
+    return $result[0];
+  }
 }
 ?>
