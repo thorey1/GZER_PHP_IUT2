@@ -1,9 +1,9 @@
 <?php
   class Membre {
-    public $num = " ";
-    public $pseudo = " ";
-    public $mail = " ";
-    public $mdp = " ";
+    private $numM;
+    private $pseudo;
+    private $mail;
+    private $mdp;
   }
 
 ?>

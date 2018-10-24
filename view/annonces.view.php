@@ -23,20 +23,34 @@
     <br><br>
     Que recherchez-vous ?
     <br><br>
-    <form action="">
+    <form action="annonces.ctrl.php">
       <input type="text" name="mot-cle" value=""><br><br>
       <select id="categorie" name="categorie">
-        <option value="prestation">Prestation</option>
+        <option value="" selected>Séléctionner une catégorie</option>
         <option value="casques_enceintes">Casques et enceintes</option>
+        <option value="prestation">Prestation</option>
         <option value="home_audio">Home audio</option>
         <option value="accessoires">Accessoires audio</option>
 
       </select>
       <br><br>
 
-      <input type="submit" name="" value="Valider la recherche">
+      <input type="submit" value="Valider la recherche">
     </form>
     <br><br>
     <h2>Toutes les annonces</h2>
+
+    <?php echo $categorie; ?> <br><br>
+
+    <?php if(isset($listAP)) {foreach ($listAP as $annonceP) { ?>
+      <a href="#"><?= $annonceP ?></a>
+      <br><br>
+    <?php } } ?>
+
+    <?php if(isset($listAM)) {foreach ($listAM as $annonceM) { ?>
+      <a href="#"><?= $annonceM ?></a>
+      <br><br>
+    <?php } } ?>
+
   </body>
   </html>

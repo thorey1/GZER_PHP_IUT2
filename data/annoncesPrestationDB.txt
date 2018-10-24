@@ -1,6 +1,0 @@
-Animation bar/café|50|Villeneuve - Village Olympique|TostonRem|22/10/2018
-Concert|200|Mistral|Koba LaD|22/10/2018
-Studio|100|Europole|Maybach music|22/10/2018
-Showcase|400|Teisseire|Salva|22/10/2018
-Concert|200|Alpexpo-Grand'Place|6ix9euf|22/10/2018
-Concert|6|Alpexpo-Grand'Place|Yvitoz|22/10/2018
