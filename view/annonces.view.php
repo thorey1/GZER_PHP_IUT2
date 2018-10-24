@@ -24,13 +24,14 @@
     Que recherchez-vous ?
     <br><br>
     <form action="annonces.ctrl.php">
-      <input type="text" name="mot-cle" value=""><br><br>
+
+      <!-- <input type="text" name="mot-cle" value=""><br><br> -->
       <select id="categorie" name="categorie">
         <option value="" selected>Séléctionner une catégorie</option>
-        <option value="casques_enceintes">Casques et enceintes</option>
-        <option value="prestation">Prestation</option>
-        <option value="home_audio">Home audio</option>
-        <option value="accessoires">Accessoires audio</option>
+        <option value="Casques et enceintes">Casques et enceintes</option>
+        <option value="Prestation">Prestation</option>
+        <option value="Home audio">Home audio</option>
+        <option value="Accessoire audio">Accessoires audio</option>
 
       </select>
       <br><br>
@@ -38,17 +39,15 @@
       <input type="submit" value="Valider la recherche">
     </form>
     <br><br>
-    <h2>Toutes les annonces</h2>
+    <h2>Toutes les annonces : <?= $categorie ?></h2>
 
-    <?php echo $categorie; ?> <br><br>
-
-    <?php if(isset($listAP)) {foreach ($listAP as $annonceP) { ?>
-      <a href="#"><?= $annonceP ?></a>
+    <?php if(isset($annoncesCat)) {foreach ($annoncesCat as $annonceCat) { ?>
+      <a href="#"><?= $annonceCat->getAuteurA() ?> - <?= $annonceCat->getTitreA() ?></a>
       <br><br>
     <?php } } ?>
 
-    <?php if(isset($listAM)) {foreach ($listAM as $annonceM) { ?>
-      <a href="#"><?= $annonceM ?></a>
+    <?php if(isset($annonces)) {foreach ($annonces as $annonce) { ?>
+      <a href="#"><?= $annonce->getAuteurA() ?> - <?= $annonce->getTitreA() ?></a>
       <br><br>
     <?php } } ?>
 

@@ -1,3 +1,4 @@
+/*
 CREATE TABLE annoncesMat (
   numAM INTEGER,
   categorieAM STRING,
@@ -8,6 +9,7 @@ CREATE TABLE annoncesMat (
   dateAM date
 );
 
+
 CREATE TABLE annoncesPrest (
   numAP INTEGER,
   titreAP STRING,
@@ -17,6 +19,18 @@ CREATE TABLE annoncesPrest (
   auteurAP STRING,
   dateAP date
 );
+*/
+CREATE TABLE annonces (
+  numA INTEGER,
+  titreA STRING,
+  prixA INTEGER,
+  localisationA STRING,
+  auteurA STRING,
+  dateA date,
+  categorieA STRING,
+  styleA STRING
+);
+
 
 CREATE TABLE membres (
   numM INTEGER,

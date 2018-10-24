@@ -9,42 +9,24 @@
     $this->dateA = $dateA;
   }
 */
+class Annonce {
+  private $numA;
+  private $titreA;
+  private $prixA;
+  private $localisationA;
+  private $auteurA;
+  private $dateA;
+  private $categorieA;
+  private $styleA;
 
-class AnnonceMat {
-  private $numAM;
-  private $categorieAM;
-  private $titreAM;
-  private $prixAM;
-  private $localisationAM;
-  private $auteurAM;
-  private $dateAM;
-
-  public function getTitreAM() {
-    return $this->titreAM;
+  public function getTitreA() {
+    return $this->titreA;
   }
 
-  public function getAuteurAM() {
-    return $this->auteurAM;
+  public function getAuteurA() {
+    return $this->auteurA;
   }
 }
 
-class AnnoncePrest {
-  private $numAP;
-  private $titreAP;
-  private $styleAP;
-  private $prixAP;
-  private $localisationAP;
-  private $auteurAP;
-  private $dateAP;
-
-  public function getTitreAP() {
-    return $this->titreAP;
-  }
-
-  public function getAuteurAP() {
-    return $this->auteurAP;
-  }
-
-}
 
 ?>

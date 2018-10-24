@@ -36,12 +36,50 @@
       </select>
       <br><br>
 
-      Titre de l'annonce <br>
+      <select id="style" name="style">
+        <option value="blues">Blues</option>
+        <option value="disco">Disco</option>
+        <option value="funk">Funk</option>
+        <option value="jazz">Jazz</option>
+        <option value="metal">Metal</option>
+        <option value="pop">Pop</option>
+        <option value="rap">Rap</option>
+        <option value="rock">Rock</option>
+        <option value="reggae">Reggae</option>
+        <option value="gospel">Gospel</option>
+        <option value="soul">Soul</option>
+
+      </select>
+      <br><br>
+
+      Titre de l'annonce <br><br>
       <input type="text" name="titre" value=""><br><br>
-      Prix <br>
+      Prix <br><br>
       <input type="text" name="prix" value=""><br><br>
-      Adresse à Grenoble <br>
-      <input type="text" name="adresse" value=""><br>
+      Quartier à Grenoble <br><br>
+      <select id="quartier" name="quartier">
+        <option value="polygone_scientifique">Blues</option>
+        <option value="esplanade">Esplanade</option>
+        <option value="bastille">Bastille</option>
+        <option value="Saint-Laurent">Saint - Laurent</option>
+        <option value="ile_verte">L'Ile Verte</option>
+        <option value="europole">Europole</option>
+        <option value="chorrier_Berriat">Chorrier - Berriat</option>
+        <option value="hyper_centre">Hyper - centre</option>
+        <option value="grands_boulevards">Grands boulevards</option>
+        <option value="eaux_claires">Eaux Claires</option>
+        <option value="capuche">Capuche</option>
+        <option value="tesseire">Tesseire</option>
+        <option value="ile_verte">L'Ile Verte</option>
+        <option value="europole">Europole</option>
+        <option value="exposition_bajatiere">Exposition - Bajatiere</option>
+        <option value="mistral">Mistral</option>
+        <option value="allies_alpins">Alliés-Alpins</option>
+        <option value="villeneuve_village_olympique">Villeneuve - Village Olympique</option>
+        <option value="le_rondeau">Le Rondeau</option>
+        <option value="alpexpo_grand'place">Alpexpo - Grand'place</option>
+
+      </select>
 
       <br><br>
 
