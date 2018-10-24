@@ -11,7 +11,7 @@
     <a href="#home">GZER</a>
     <a href="#boutique">Déposer une annoce</a>
     <a href="#annonces">Annonces</a>
-    <a class="active" href="#se_connecter">Se connecter</a>
+    <a class="active" href="http://www-etu-info.iut2.upmf-grenoble.fr/~hassanyo/github/GZER_PHP_IUT2/view/connexion.view.php">Se connecter</a>
   </div>
 
   <div class="navbar">
