@@ -18,32 +18,21 @@ if (isset($_GET['categorie'])) {
 // PARTIE USAGE DU MODELE
 //////////////////////////////////////////////////////////////////////////////
 
-if ($categorie = 'prestation') {
+if ($categorie != '') {
   $config = parse_ini_file('../config/config.ini');
-  $annonces = new GzerDAO($config['database_path']);
+  $DAO = new GzerDAO($config['database_path']);
 
-  for ($i=1; $i <= 6; $i++) {
-    $AP = $annonces->getAnnonceP($i);
-    $listAP[$i] = $AP->getAuteurAP().' - '.$AP->getTitreAP();
-  }
-} else if ($categorie = '') {
-  $config = parse_ini_file('../config/config.ini');
-  $annonces = new GzerDAO($config['database_path']);
-
-  for ($i=1; $i <= 6; $i++) {
-    $AP = $annonces->getAnnonceP($i);
-    var_dump($AP);
-    $listAP[$i] = $AP->getTitreAP();
-    $AM = $annonces->getAnnonceM($i);
-    $listAM[$i] = $AM->getTitreAM();
-  }
+  $annoncesCat = $DAO->getAnnoncesParCategorie($categorie);
 } else {
-  echo 'ya r';
+  $config = parse_ini_file('../config/config.ini');
+  $DAO = new GzerDAO($config['database_path']);
+
+  $annonces = $DAO->getAnnonces();
 }
 
 //////////////////////////////////////////////////////////////////////////////
 // PARTIE USAGE DE LA VUE
 //////////////////////////////////////////////////////////////////////////////
-//On charge la vue avec les annonces correspondantes
+//On charge la vue avec les DAOcorrespondantes
 include('../view/annonces.view.php');
 ?>
