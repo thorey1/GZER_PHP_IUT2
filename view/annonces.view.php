@@ -7,16 +7,15 @@
 </head>
 <body>
   <div class="topnav">
-    <a href="#home">GZER</a>
-    <a href="#boutique">Déposer une annonce</a>
-    <a class="active" href="#annonces">Annonces</a>
-    <a href="#se_connecter">Se connecter</a>
+    <a href="../controler/main.ctrl.php">GZER</a>
+    <a href="../controler/deposer_annonce.ctrl.php">Déposer une annonce</a>
+    <a class="active" href="../controler/annonces.ctrl.php">Annonces</a>
+    <a href="../controler/seconnecter.ctrl.php">Se connecter</a>
   </div>
 
   <div class="navbar">
-    <a href="#questions">Des questions ?</a>
-    <a href="#infos">Informations légales</a>
-    <a href="#a_propos">A propos</a>
+    <a href="../view/infos.view.php">Informations légales</a>
+    <a href="../view/a_propos.view.php">A propos</a>
   </div>
 
   <div id=container style="padding-left:16px">
@@ -39,17 +38,31 @@
       <input type="submit" value="Valider la recherche">
     </form>
     <br><br>
-    <h2>Toutes les annonces : <?= $categorie ?></h2>
+    <h2>Toutes les annonces : <?= $categorie ?>  <?= $quartier ?></h2>
 
     <?php if(isset($annoncesCat)) {foreach ($annoncesCat as $annonceCat) { ?>
-      <a href="#"><?= $annonceCat->getAuteurA() ?> - <?= $annonceCat->getTitreA() ?></a>
+      <a href="../controler/annonce.ctrl.php?numA=<?= $annonceCat->getNumA() ?>"><?= $annonceCat->getAuteurA() ?> - <?= $annonceCat->getTitreA() ?></a>
+      <br><br>
+    <?php } } ?>
+
+    <?php if(isset($annoncesQuart)) {foreach ($annoncesQuart as $annonceQuart) { ?>
+      <a href="../controler/annonce.ctrl.php?numA=<?= $annonceQuart->getNumA() ?>"><?= $annonceQuart->getAuteurA() ?> - <?= $annonceQuart->getTitreA() ?></a>
       <br><br>
     <?php } } ?>
 
     <?php if(isset($annonces)) {foreach ($annonces as $annonce) { ?>
-      <a href="#"><?= $annonce->getAuteurA() ?> - <?= $annonce->getTitreA() ?></a>
+      <a href="../controler/annonce.ctrl.php?numA=<?= $annonce->getNumA() ?>"><?= $annonce->getAuteurA() ?> - <?= $annonce->getTitreA() ?></a>
       <br><br>
     <?php } } ?>
 
+    <?php if(isset($annoncesStyle)) {foreach ($annoncesStyle as $annonceStyle) { ?>
+      <a href="../controler/annonce.ctrl.php?numA=<?= $annonceStyle->getNumA() ?>"><?= $annonceStyle->getAuteurA() ?> - <?= $annonceStyle->getTitreA() ?></a>
+      <br><br>
+    <?php } } ?>
+
+    <?php if((!isset($annonces) || count($annonces) == 0) && (!isset($annoncesQuart) || count($annoncesQuart) == 0) && (!isset($annoncesCat) || count($annoncesCat) == 0) && (!isset($annoncesStyle) || count($annoncesStyle) == 0)) { ?>
+      <h3>Aucune annonce disponible</h3>
+    <?php } ?>
+  </div>
   </body>
   </html>

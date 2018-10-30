@@ -8,16 +8,15 @@
 <body>
 
   <div class="topnav">
-    <a href="#home">GZER</a>
-    <a href="#boutique">Déposer une annoce</a>
-    <a href="#annonces">Annonces</a>
-    <a class="active" href="http://www-etu-info.iut2.upmf-grenoble.fr/~hassanyo/github/GZER_PHP_IUT2/view/seconnecter.ctrl.php">Se connecter</a>
+    <a href="../controler/main.ctrl.php">GZER</a>
+    <a href="../controler/deposer_annonce.ctrl.php">Déposer une annoce</a>
+    <a href="../controler/annonces.ctrl.php">Annonces</a>
+    <a class="active" href="../controler/seconnecter.ctrl.php">Se connecter</a>
   </div>
 
   <div class="navbar">
-    <a href="#questions">Des questions ?</a>
-    <a href="#infos">Informations légales</a>
-    <a href="#a_propos">A propos</a>
+    <a href="../view/infos.view.php">Informations légales</a>
+    <a href="../view/a_propos.view.php">A propos</a>
   </div>
 
   <div id=container style="padding-left:16px">

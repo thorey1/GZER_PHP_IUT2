@@ -12,14 +12,20 @@ if (isset($_GET['style'])) {
   $style = '';
 }
 
+if (isset($_GET['materiel'])) {
+  $materiel = $_GET['materiel'];
+} else {
+  $materiel = '';
+}
+
 //////////////////////////////////////////////////////////////////////////////
 // PARTIE SELECTION DE LA VUE
 //////////////////////////////////////////////////////////////////////////////
 
-//Si on connait le style de musique, on charge la vue avec les artistes correspondants
-if ($style != '') {
+//Si on connait le style de musique ou le matériel, on charge la vue avec les artistes correspondants
+if ($style != '' || $materiel != '') {
   //On charge la vue
-  include('../view/artistes.view.php');
+  include('../controler/annonces.ctrl.php');
 } else {
   //On charge la vue principale
   include('../view/main.view.php');

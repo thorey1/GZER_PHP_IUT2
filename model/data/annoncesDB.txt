@@ -2,11 +2,11 @@
 2|Concert|200|Mistral|Koba LaD|22/10/2018|Prestation|Rap
 3|Studio|100|Europole|Maybach music|22/10/2018|Prestation|Rap
 4|Showcase|400|Teisseire|Salva|22/10/2018|Prestation|Funk
-5|Concert|200|Alpexpo-Grand'Place|6ix9euf|22/10/2018|Prestation|Rap
-6|Concert|6|Alpexpo-Grand'Place|Yvitoz|22/10/2018|Prestation|Rap
+5|Concert|200|Alpexpo-Grand Place|6ix9euf|22/10/2018|Prestation|Rap
+6|Concert|6|Alpexpo-Grand Place|Yvitoz|22/10/2018|Prestation|Rap
 7|Casque Bose|70|Hyper-centre|CJdu38|22/10/2018|Casques et enceintes|
 8|Hi-Fi Yamaha|400|Eaux Claires|Lefrero|22/10/2018|Home audio|
 9|Adaptateur mp3 Samsung|5|Capuche|MohaLeSquale|22/10/2018|Accessoire audio|
 10|Ecouteurs sennheiser|20|Grands Boulevards|Thor|22/10/2018|Casques et enceintes|
-11|Clavier Roland|1300|L'Ile verte|lilpelo|22/10/2018|Home audio|
+11|Clavier Roland|1300|Ile verte|lilpelo|22/10/2018|Home audio|
 12|Cable midi Thomann|10|Vigny-Musset|Laurent|22/10/2018|Accessoire audio|

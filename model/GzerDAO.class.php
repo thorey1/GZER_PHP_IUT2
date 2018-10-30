@@ -41,6 +41,22 @@ class GzerDAO {
     return $result;
   }
 
+  public function getAnnoncesParStyle(string $style):array{
+    $req = "SELECT * FROM annonces WHERE styleA = '$style'";
+    $st = $this->getDb()->query($req);
+    $result=$st->fetchAll(PDO::FETCH_CLASS, 'Annonce');
+
+    return $result;
+  }
+
+  public function getAnnoncesParQuartier(string $quartier):array{
+    $req = "SELECT * FROM annonces WHERE localisationA = '$quartier'";
+    $st = $this->getDb()->query($req);
+    $result=$st->fetchAll(PDO::FETCH_CLASS, 'Annonce');
+
+    return $result;
+  }
+
   public function getAnnonces():array{
     $req = "SELECT * FROM annonces";
     $st = $this->getDb()->query($req);
