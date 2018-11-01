@@ -56,5 +56,5 @@ require_once('../model/GzerDAO.class.php');
 // PARTIE USAGE DE LA VUE
 //////////////////////////////////////////////////////////////////////////////
 //On charge la vue avec les annonces correspondantes
-include('../view/annonces.view.php');
+include('../controler/deposer_annonce.ctrl.php');
  ?>
