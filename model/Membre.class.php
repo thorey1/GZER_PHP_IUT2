@@ -1,9 +1,14 @@
 <?php
-  class Membre {
-    private $numM;
-    private $pseudo;
-    private $mail;
-    private $mdp;
+
+class Membre {
+  private $numM;
+  private $pseudoM;
+  private $mailM;
+  private $mdpM;
+
+  public function getMailM() {
+    return $this->mailM;
   }
+}
 
 ?>

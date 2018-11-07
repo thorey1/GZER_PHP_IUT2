@@ -27,6 +27,9 @@
       <br>
       <h3>Artiste : <?= $annonce->getAuteurA() ?></h3>
       <h3>Date de mise en ligne : <?= $annonce->getDateA() ?></h3>
+      <h3>Envoyer un mail à l'adresse suivante : <?= $membre->getMailM() ?></h3>
+    <?php } else if ($erreur == 0) { ?>
+      <h2>Une erreur est survenue</h2>
     <?php } ?>
 
   </div>

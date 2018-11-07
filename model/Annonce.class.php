@@ -1,14 +1,5 @@
 <?php
-/*
-  public function __construct($numA, $titreA, $prixA, $localisation, $auteurA, $dateA){
-    $this->numA = $numA;
-    $this->titreA = $titreA;
-    $this->prixA = $prixA;
-    $this->localisation = $localisation;
-    $this->auteurA = $auteurA;
-    $this->dateA = $dateA;
-  }
-*/
+
 class Annonce {
   private $numA;
   private $titreA;
@@ -47,6 +38,5 @@ class Annonce {
     return $this->dateA;
   }
 }
-
 
 ?>

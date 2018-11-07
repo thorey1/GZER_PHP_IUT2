@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 CREATE TABLE annonces (
   numA INTEGER,
   titreA STRING,
@@ -8,7 +7,7 @@ CREATE TABLE annonces (
   dateA date,
   categorieA STRING,
   styleA STRING
-=======
+);
 /*
 CREATE TABLE annoncesMat (
   numAM INTEGER,
@@ -29,14 +28,13 @@ CREATE TABLE annoncesPrest (
   localisationAP STRING,
   auteurAP STRING,
   dateAP date
->>>>>>> 3b984e9cc6345d16e3136b2e7311bed0f5b419ca
 );
 */
 
 
 CREATE TABLE membres (
   numM INTEGER,
-  pseudo STRING,
-  mail STRING,
-  mdp STRING
+  pseudoM STRING,
+  mailM STRING,
+  mdpM STRING
 );

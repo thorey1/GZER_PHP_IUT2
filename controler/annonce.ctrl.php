@@ -1,6 +1,7 @@
 <?php
 // Controleur annonces
 require_once('../model/Annonce.class.php');
+require_once('../model/Membre.class.php');
 require_once('../model/GzerDAO.class.php');
 
 //////////////////////////////////////////////////////////////////////////////
@@ -22,6 +23,7 @@ $erreur = 1;
     $DAO = new GzerDAO($config['database_path']);
 
     $annonce = $DAO->getAnnonceParNum($numA);
+    $membre = $DAO->getMembreParPseudo($annonce->getAuteurA());
   } else {
     $erreur = 0;
   }
