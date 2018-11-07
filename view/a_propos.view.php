@@ -22,7 +22,9 @@
 
     <h2>Qui sommes-nous ?</h2>
 
-    <p>GZER est une plateforme de ...</p>
+    <p>GZER est une plateforme de petites annonces de matériels ou prestations <br>
+      exclusivement mises en ligne par des artistes Grenoblois.
+    </p>
 
   </div>
 </body>

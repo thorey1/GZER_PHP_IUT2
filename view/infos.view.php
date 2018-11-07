@@ -22,6 +22,13 @@
 
     <h2>Informations légales</h2>
 
-  </div>
+    <p>Le site est édité par GZER FRANCE, SARL au capital de 8 euros, <br>
+      immatriculée au registre du commerce et des sociétés de Grenoble. <br><br>
+      Siège social : 23 bvd Clémenceau - Grenoble. <br><br>
+
+      Contact : <br><br>
+      06 60 26 90 50
+    </p>
+   </div>
 </body>
 </html>
