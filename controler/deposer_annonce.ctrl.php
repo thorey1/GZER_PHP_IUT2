@@ -37,18 +37,18 @@ if (isset($localisation)) {
   $localisation = '';
 }
 
-$num= count($DAO->getAnnonces())+1;
-$date= date("j/m/Y");
-$auteur= "";
+$num = count($DAO->getAnnonces())+1;
+$date = date("j/m/Y");
+$auteur = "";
 
-if ((isset($categorie) && $categorie == 'Prestation' && isset($style) && isset($titre) && isset($prix) && isset($localisation)) || (isset($categorie) && $categorie != 'Prestation' && isset($style) && $style == '' && isset($titre) && isset($prix) && isset($localisation))) {
-  $redirection = "../view/annonce_deposee.view.php";
-} else {
-  $redirection = "deposer_annonce.ctrl.php"; 
-}
+
 //////////////////////////////////////////////////////////////////////////////
 // PARTIE USAGE DE LA VUE
 //////////////////////////////////////////////////////////////////////////////
 //On charge la vue avec les annonces correspondantes
-include('../view/deposer_annonce.view.php');
+if ((!empty($categorie) && $categorie == 'Prestation' && !empty($style) && !empty($titre) && !empty($prix) && !empty($localisation)) || (!empty($categorie) && $categorie != 'Prestation' && !empty($style) && $style == '' && !empty($titre) && !empty($prix) && !empty($localisation))) {
+  include('../view/annonce_deposee.view.php');
+} else {
+  include('../view/deposer_annonce.view.php');
+}
 ?>

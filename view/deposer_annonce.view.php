@@ -25,9 +25,8 @@
     <h3>Votre annonce</h3>
     Catégorie
     <br><br>
-    <?php var_dump($redirection) ?>
 
-    <form action="<?= $redirection ?>">
+    <form action="deposer_annonce.ctrl.php">
       <select id="categorie" name="categorie">
         <option value="Prestation">Prestation</option>
         <option value="Casques et enceintes">Casques et enceintes</option>

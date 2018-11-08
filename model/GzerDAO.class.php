@@ -109,7 +109,6 @@ class GzerDAO {
       'mdpM' => $mdpM,
       'mailM' => $mailM,
     ]);
-    var_dump($st);
     return $this->getDb()->lastInsertId();
   }
 }
