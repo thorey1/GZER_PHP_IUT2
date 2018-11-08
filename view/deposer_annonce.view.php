@@ -25,8 +25,7 @@
     <h3>Votre annonce</h3>
     Catégorie
     <br><br>
-    <?php if (($_GET['categorie'] == 'Prestation' && $_GET['style'] != '' && $_GET['titre'] != '' && $_GET['prix'] != '' && $_GET['localisation'] != '')
-    || ($_GET['categorie'] != 'Prestation' && $_GET['style'] == '' && $_GET['titre'] != '' && $_GET['prix'] != '' && $_GET['localisation'] != '')) {
+    <?php if (((isset($_GET['categorie']) && $_GET['categorie'] == 'Prestation') && isset($_GET['style']) && isset($_GET['titre']) && isset($_GET['prix']) && isset($_GET['localisation'])) || ((isset($_GET['categorie']) && $_GET['categorie'] != 'Prestation') && (isset($_GET['style']) && $_GET['style'] == '') && isset($_GET['titre']) && isset($_GET['prix']) && isset($_GET['localisation']))) {
       $redirection = "../view/annonce_deposee.view.php";
     } else {
       $redirection = "deposer_annonce.ctrl.php";

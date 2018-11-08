@@ -18,7 +18,13 @@
     <a href="../view/a_propos.view.php">A propos</a>
   </div>
 
-  <?php $DAO->insertAnnonce($num, $titre, $prix, $localisation, $auteur, $date, $categorie, $style); ?>
+  <?php
+  require_once('../model/GzerDAO.class.php');
+  $config = parse_ini_file('../config/config.ini');
+  $DAO = new GzerDAO($config['database_path']);
+  $DAO->insertAnnonce($num, $titre, $prix, $localisation, $auteur, $date, $categorie, $style);
+  ?>
+
   <div id=container style="padding-left:16px">
 
     <h2>Merci, votre annonce a été déposée</h2>
