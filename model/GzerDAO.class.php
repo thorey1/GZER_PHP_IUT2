@@ -98,5 +98,19 @@ class GzerDAO {
     var_dump($st);
     return $this->getDb()->lastInsertId();
   }
+
+
+  public function insertMembre($numM,$pseudoM,$mailM,$mdpM){
+    $req = "INSERT INTO membres(numM, pseudoM, mailM, mdpM) VALUES(:numM, :pseudoM, :mailM, :mdpM)";
+    $st = $this->getDb()->prepare($req);
+    $st->execute([
+      'numM' => $numM,
+      'pseudoM' => $pseudoM,
+      'mdpM' => $mdpM,
+      'mailM' => $mailM,
+    ]);
+    var_dump($st);
+    return $this->getDb()->lastInsertId();
+  }
 }
 ?>
