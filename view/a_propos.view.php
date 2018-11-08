@@ -11,6 +11,7 @@
     <a href="../controler/deposer_annonce.ctrl.php">Déposer une annonce</a>
     <a href="../controler/annonces.ctrl.php">Annonces</a>
     <a href="../controler/seconnecter.ctrl.php">Se connecter</a>
+    <a href="../controler/inscription.ctrl.php">Inscription</a>
   </div>
 
   <div class="navbar">
