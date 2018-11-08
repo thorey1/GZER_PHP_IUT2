@@ -25,7 +25,15 @@
     <h3>Votre annonce</h3>
     Catégorie
     <br><br>
-    <form action="">
+    <?php if (($_GET['categorie'] == 'Prestation' && $_GET['style'] != '' && $_GET['titre'] != '' && $_GET['prix'] != '' && $_GET['localisation'] != '')
+    || ($_GET['categorie'] != 'Prestation' && $_GET['style'] == '' && $_GET['titre'] != '' && $_GET['prix'] != '' && $_GET['localisation'] != '')) {
+      $redirection = "../view/annonce_deposee.view.php";
+    } else {
+      $redirection = "deposer_annonce.ctrl.php";
+    }
+    var_dump($redirection);
+    ?>
+    <form action="<?= $redirection ?>">
       <select id="categorie" name="categorie">
         <option value="Prestation">Prestation</option>
         <option value="Casques et enceintes">Casques et enceintes</option>
@@ -58,7 +66,7 @@
       Prix <br><br>
       <input type="text" name="prix" value="">€<br><br>
       Quartier à Grenoble <br><br>
-      <select id="quartier" name="quartier">
+      <select id="localisation" name="localisation">
         <option value="Polygone Scientifique"></option>
         <option value="Esplanade">Esplanade</option>
         <option value="Bastille">Bastille</option>

@@ -23,21 +23,14 @@ if (isset($titre)) {
 if (isset($prix)) {
   $prix = $_GET['prix'];
 }
-if (isset($quartier)) {
-  $quartier = $_GET['quartier'];
+if (isset($localisation)) {
+  $localisation = $_GET['localisation'];
 }
 
 $num= count($DAO->getAnnonces())+1;
-$date= date("j, n, Y");
+$date= date("j/m/Y");
 $auteur= "";
 
-if (isset($categorie) && $categorie == 'Prestation' && isset($num) && isset($titre) && isset($prix) && isset($localisation) && isset($auteur) && isset($date) && isset($style)) {
-  echo "prest";
-  $DAO->insertAnnonce($num, $titre, $prix, $localisation, $auteur, $date, $categorie, $style);
-} else if (isset($categorie) && isset($num) && isset($titre) && isset($prix) && isset($localisation) && isset($auteur) && isset($date) && isset($style) && $style = ''){
-  echo "matos";
-  $DAO->insertAnnonce($num, $titre, $prix, $localisation, $auteur, $date, $categorie, $style);
-}
 //////////////////////////////////////////////////////////////////////////////
 // PARTIE USAGE DE LA VUE
 //////////////////////////////////////////////////////////////////////////////
