@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title>Gzer connexion</title>
+  <title>Gzer inscription</title>
   <link rel="stylesheet" href="../view/css/deposer_annonce.view.styles.css" />
 </head>
 <body>
@@ -24,7 +24,7 @@
 
       <h1>Inscrivez-vous ici</h1>
 
-      <form action="../controler/seconnecter.ctrl.php">
+      <form action="../controler/inscription.ctrl.php">
 
         <p>Pseudo</p>
 
@@ -48,9 +48,6 @@
 
         <br><br>
 
-        <a href="?#">Mot de passe oublié ?</a><br>
-
-        <a href="#">Vous n'avez pas encore de compte ?</a>
 
       </form>
 
