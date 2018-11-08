@@ -1,6 +1,6 @@
 <?php
 // Controleur connexion
-require_once('../model/membre.class.php');
+require_once('../model/Membre.class.php');
 require_once('../model/GzerDAO.class.php');
 
 
