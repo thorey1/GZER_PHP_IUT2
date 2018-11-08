@@ -35,6 +35,8 @@
     }
 
 
+  } else {
+    include('../view/inscriptio.view.php');
   }
 
 
