@@ -8,10 +8,19 @@
   $config = parse_ini_file('../config/config.ini');
   $DAO = new GzerDAO($config['database_path']);
 
-  $pseudoM = $_POST['pseudo'];
-  $mailM = $_POST['mail'];
-  $mdpM = $_POST['mdp'];
-  $mdpVerif = $S_POST['rmdp'];
+  if(isset($_POST['pseudo'])){
+    $pseudoM = $_POST['pseudo'];
+  }
+
+  if(isset($_POST['mdp'])){
+    $mdpM = $_POST['mdp'];
+  }
+
+  if(isset($_POST['rmdp'])){
+    $mdpVerif = $_POST['rmdp'];
+  }
+
+
 
 
   if (isset($pseudoM) && isset($mailM) && isset($mdpM) && isset($mdpVerif)){
