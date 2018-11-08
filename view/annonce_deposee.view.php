@@ -19,7 +19,7 @@
   </div>
 
 
-  <?php prequire_once('../model/GzerDAO.class.php'); ?>
+  <?php require_once('../model/GzerDAO.class.php'); ?>
   <?php $config = parse_ini_file('../config/config.ini'); ?>
   <?php $DAO = new GzerDAO($config['database_path']); ?>
   <?php $DAO->insertAnnonce($num, $titre, $prix, $localisation, $auteur, $date, $categorie, $style); ?>

@@ -1,4 +1,3 @@
-<?php echo isset($categorie); echo isset($style); echo isset($titre); echo isset($prix); echo isset($localisation);?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -26,12 +25,6 @@
     <h3>Votre annonce</h3>
     Catégorie
     <br><br>
-    <?php if ((isset($categorie) && $categorie == 'Prestation' && isset($style) && isset($titre) && isset($prix) && isset($localisation)) || (isset($categorie) && $categorie != 'Prestation' && isset($style) && $style == '' && isset($titre) && isset($prix) && isset($localisation))) { ?>
-    <?php  $redirection = "../view/annonce_deposee.view.php"; ?>
-    <?php } else { ?>
-    <?php  $redirection = "deposer_annonce.ctrl.php"; ?>
-    <?php } ?>
-
     <?php var_dump($redirection) ?>
 
     <form action="<?= $redirection ?>">
