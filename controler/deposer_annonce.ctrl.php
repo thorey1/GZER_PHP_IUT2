@@ -6,55 +6,41 @@ require_once('../model/GzerDAO.class.php');
 // PARTIE USAGE DU MODELE
 //////////////////////////////////////////////////////////////////////////////
 
-  date_default_timezone_set('UTC');
+date_default_timezone_set('UTC');
 
-  $config = parse_ini_file('../config/config.ini');
-  $dao = new GzerDAO($config['database_path']);
+$config = parse_ini_file('../config/config.ini');
+$DAO = new GzerDAO($config['database_path']);
 
+if (isset($categorie)) {
   $categorie = $_GET['categorie'];
+}
+if (isset($style)) {
+  $style = $_GET['style'];
+}
+if (isset($titre)) {
   $titre = $_GET['titre'];
+}
+if (isset($prix)) {
   $prix = $_GET['prix'];
+}
+if (isset($quartier)) {
   $quartier = $_GET['quartier'];
-  $numA= count(getAnnoncesAll())+1;
-  $dateA= date("j, n, Y");
-  $auteurA= getAuteurA();
-  if (isset($categorie)== 'prestation'){
-    $style= $_GET['style'];
+}
 
-    $insert = "INSERT INTO annonce (numA, titreA, prixA, localisationA, auteurA, dateA, categorieA, styleA) VALUES (:numA, :titreA, :prixA, :localisationA, :auteurA, :dateA, :categoieA, :styleA )";
-    $statement = $db->prepare($insert);
+$num= count($DAO->getAnnonces())+1;
+$date= date("j, n, Y");
+$auteur= "";
 
-    // Bind parameters to statement variables
-      $stmt->bindValue(':numA', $numA);
-      $stmt->bindValue(':titreA', $titre);
-      $stmt->bindValue(':prixA', $prix);
-      $stmt->bindValue(':localisationA', $quartier);
-      $stmt->bindValue(':auteurA', $auteurA);
-      $stmt->bindValue(':dateA', $dateA);
-      $stmt->bindValue(':categorieA', $categorie);
-      $stmt->bindValue(':styleA', $style);
-    }
-  else {
-    $style= '';
-
-    $insert = "INSERT INTO annonce (numA, titreA, prixA, localisationA, auteurA, dateA, categorieA, styleA) VALUES (:numA, :titreA, :prixA, :localisationA, :auteurA, :dateA, :categoieA, :styleA )";
-    $statement = $db->prepare($insert);
-
-    // Bind parameters to statement variables
-      $stmt->bindValue(':numA', $numA);
-      $stmt->bindValue(':titreA', $titre);
-      $stmt->bindValue(':prixA', $prix);
-      $stmt->bindValue(':localisationA', $quartier);
-      $stmt->bindValue(':auteurA', $auteurA);
-      $stmt->bindValue(':dateA', $dateA);
-      $stmt->bindValue(':categorieA', $categorie);
-      $stmt->bindValue(':styleA', $style);
-    }
-
-    $stmt->execute();
+if (isset($categorie) && $categorie == 'Prestation' && isset($num) && isset($titre) && isset($prix) && isset($localisation) && isset($auteur) && isset($date) && isset($style)) {
+  echo "prest";
+  $DAO->insertAnnonce($num, $titre, $prix, $localisation, $auteur, $date, $categorie, $style);
+} else if (isset($categorie) && isset($num) && isset($titre) && isset($prix) && isset($localisation) && isset($auteur) && isset($date) && isset($style) && $style = ''){
+  echo "matos";
+  $DAO->insertAnnonce($num, $titre, $prix, $localisation, $auteur, $date, $categorie, $style);
+}
 //////////////////////////////////////////////////////////////////////////////
 // PARTIE USAGE DE LA VUE
 //////////////////////////////////////////////////////////////////////////////
 //On charge la vue avec les annonces correspondantes
-include('../controler/deposer_annonce.ctrl.php');
- ?>
+include('../view/deposer_annonce.view.php');
+?>

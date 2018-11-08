@@ -80,5 +80,23 @@ class GzerDAO {
 
     return $result[0];
   }
+
+  public function insertAnnonce($numA, $titreA, $prixA, $localisationA, $auteurA, $dateA, $categorieA, $styleA) {
+    $req = "INSERT INTO annonces(numA, titreA, prixA, localisationA, auteurA, dateA, categorieA, styleA)
+    VALUES(:numA, :titreA, :prixA, :localisationA, :auteurA, :dateA, :categorieA, :styleA)";
+    $st = $this->getDb()->prepare($req);
+    $st->execute([
+      ':numA' => $numA,
+      ':titreA' => $titreA,
+      ':prixA' => $prixA,
+      ':localisationA' => $localisationA,
+      ':auteurA' => $auteurA,
+      ':dateA' => $dateA,
+      ':categorieA' => $categorieA,
+      ':styleA' => $styleA,
+    ]);
+    var_dump($st);
+    return $this->getDb()->lastInsertId();
+  }
 }
 ?>

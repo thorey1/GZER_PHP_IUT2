@@ -34,8 +34,10 @@
 
       </select>
       <br><br>
-
+      Style pour une annonce de prestation
+      <br><br>
       <select id="style" name="style">
+        <option value="" selected></option>
         <option value="Blues">Blues</option>
         <option value="Disco">Disco</option>
         <option value="Funk">Funk</option>
