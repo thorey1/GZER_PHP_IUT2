@@ -11,8 +11,8 @@
     <a href="../controler/main.ctrl.php">GZER</a>
     <a href="../controler/deposer_annonce.ctrl.php">Déposer une annoce</a>
     <a href="../controler/annonces.ctrl.php">Annonces</a>
-    <a class="active" href="../controler/seconnecter.ctrl.php">Se connecter</a>
-    <a href="../controler/inscription.ctrl.php">Inscription</a>
+    <a href="../controler/seconnecter.ctrl.php">Se connecter</a>
+    <a class="active" href="../controler/inscription.ctrl.php">Inscription</a>
   </div>
 
   <div class="navbar">

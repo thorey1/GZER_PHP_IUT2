@@ -95,7 +95,6 @@ class GzerDAO {
       ':categorieA' => $categorieA,
       ':styleA' => $styleA,
     ]);
-    var_dump($st);
     return $this->getDb()->lastInsertId();
   }
 
@@ -104,10 +103,10 @@ class GzerDAO {
     $req = "INSERT INTO membres(numM, pseudoM, mailM, mdpM) VALUES(:numM, :pseudoM, :mailM, :mdpM)";
     $st = $this->getDb()->prepare($req);
     $st->execute([
-      'numM' => $numM,
-      'pseudoM' => $pseudoM,
-      'mdpM' => $mdpM,
-      'mailM' => $mailM,
+      ':numM' => $numM,
+      ':pseudoM' => $pseudoM,
+      ':mdpM' => $mdpM,
+      ':mailM' => $mailM,
     ]);
     return $this->getDb()->lastInsertId();
   }

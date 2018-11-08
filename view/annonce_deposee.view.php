@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="../view/css/deposer_annonce.view.styles.css" />
-  <title>Gzer - informations légales</title>
+  <title>Gzer - Annonce déposée</title>
 </head>
 <body>
   <div class="topnav">

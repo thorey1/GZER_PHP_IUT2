@@ -27,7 +27,7 @@
     Catégorie
     <br><br>
 
-    <form action="">
+    <form action="deposer_annonce.ctrl.php">
       <select id="categorie" name="categorie">
         <option value="Prestation">Prestation</option>
         <option value="Casques et enceintes">Casques et enceintes</option>
@@ -38,6 +38,8 @@
       <br><br>
       Style pour une annonce de prestation
       <br><br>
+      Laisser ce champ vide s'il s'agit d'une prestation !
+      <br>
       <select id="style" name="style">
         <option value="" selected></option>
         <option value="Blues">Blues</option>
@@ -56,9 +58,9 @@
       <br><br>
 
       Titre de l'annonce <br><br>
-      <input type="text" name="titre" value=""><br><br>
+      <input type="text" name="titre" placeholder="Entrer le titre" value=""><br><br>
       Prix <br><br>
-      <input type="text" name="prix" value="">€<br><br>
+      <input type="text" name="prix" placeholder="Entrer le prix" value="">€<br><br>
       Quartier à Grenoble <br><br>
       <select id="localisation" name="localisation">
         <option value="Polygone Scientifique"></option>
@@ -87,10 +89,6 @@
 
       <input type="submit" name="" value="Valider la saisie">
       <br>
-    </form>
-
-    <form action="deposer_annonce.ctrl.php">
-      <input type="submit" name="" value="Valider l'annonce">
     </form>
   </div>
 
