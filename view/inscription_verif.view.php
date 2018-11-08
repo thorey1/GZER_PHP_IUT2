@@ -20,8 +20,14 @@
   </div>
 
   <div id=container style="padding-left:16px">
-    <p>Vous êtes bien inscrit</p>
-
+    <?php
+      $pb=$_GET['pb'];
+      if($pb==0){
+        print "<p>Vous êtes bien inscrit</p>";
+      } else if($pb==1){
+        print "<p>Probleme dans les renseignements</p>";
+      }
+    ?>
   </div>
 
 </body>
