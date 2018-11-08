@@ -20,7 +20,7 @@
     $mdpM = $_POST['mdpM'];
   }
 
-  if (isset($pseudoM),isset($mailM),isset($mdpM)){
+  if (isset($pseudoM) && isset($mailM) && isset($mdpM)){
     $numM= count($DAO->getMembres())+1;
     $pass_hache = password_hash($_POST['mdpM'], PASSWORD_DEFAULT);
 
