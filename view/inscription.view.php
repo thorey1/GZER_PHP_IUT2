@@ -24,7 +24,7 @@
 
       <h1>Inscrivez-vous ici</h1>
 
-      <form action="../controler/inscription.ctrl.php">
+      <form action="../controler/inscription.ctrl.php" method="post">
 
         <p>Pseudo</p>
 
