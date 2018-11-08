@@ -26,7 +26,7 @@
     Catégorie
     <br><br>
 
-    <form action="deposer_annonce.ctrl.php">
+    <form action="">
       <select id="categorie" name="categorie">
         <option value="Prestation">Prestation</option>
         <option value="Casques et enceintes">Casques et enceintes</option>
@@ -84,6 +84,11 @@
 
       <br><br>
 
+      <input type="submit" name="" value="Valider la saisie">
+      <br>
+    </form>
+
+    <form action="deposer_annonce.ctrl.php">
       <input type="submit" name="" value="Valider l'annonce">
     </form>
   </div>

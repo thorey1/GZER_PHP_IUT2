@@ -46,12 +46,12 @@ $auteur = "";
 // PARTIE USAGE DE LA VUE
 //////////////////////////////////////////////////////////////////////////////
 //On charge la vue avec les annonces correspondantes
-var_dump(empty($categorie));
-var_dump(empty($style));
-var_dump(empty($titre));
-var_dump(empty($prix));
-var_dump(empty($localisation));
-if (($categorie == 'Prestation' && $style != '' && $titre != '' && $prix != '' && $localisation != '') || (!empty($categorie) && $categorie != 'Prestation' && !empty($style) && $style == '' && !empty($titre) && !empty($prix) && !empty($localisation))) {
+var_dump($categorie);
+var_dump($style);
+var_dump($titre);
+var_dump($prix);
+var_dump($localisation);
+if (($categorie == 'Prestation' && $style != '' && $titre != '' && $prix != '' && $localisation != '') || ($categorie != 'Prestation' && $style == '' && $titre != '' && $prix != '' && $localisation != '')) {
   include('../view/annonce_deposee.view.php');
 } else {
   include('../view/deposer_annonce.view.php');
