@@ -22,7 +22,7 @@
   <div id=container style="padding-left:16px">
     <div class="loginbox">
 
-      <h1>Connectez-vous ici</h1>
+      <h1>Inscrivez-vous ici</h1>
 
       <form action="../controler/seconnecter.ctrl.php">
 
@@ -34,17 +34,17 @@
 
         <input type="password" name="mdp" placeholder="Entrer le mot de passe">
 
-        <p>Retaper votre mot de passe"</p>
+        <p>Retaper votre mot de passe</p>
 
-        <input type="password" name="rmdp">
+        <input type="password" name="rmdp" placeholder="Retaper le mot de passe">
 
-        <p>Adresse Mail"</p>
+        <p>Adresse Mail</p>
 
         <input type="email" name="mail" placeholder="aa@bb.cc">
 
         <br><br>
 
-        <input type="submit" name="" value="Se connecter">
+        <input type="submit" name="" value="Créer votre compte GZER">
 
         <br><br>
 

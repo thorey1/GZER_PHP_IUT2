@@ -11,19 +11,22 @@
 
 
   if (isset($pseudoM)) {
-    $pseudoM = $_GET['pseudoM'];
+    $pseudoM = $_POST['pseudoM'];
   }
   if (isset($mailM)) {
-    $mailM = $_GET['mailM'];
+    $mailM = $_POST['mailM'];
   }
   if (isset($mdpM)) {
-    $mdpM = $_GET['mdpM'];
+    $mdpM = $_POST['mdpM'];
   }
 
-  $num= count($DAO->getMembres())+1;
-  $pass_hache = password_hash($_POST['mdpM'], PASSWORD_DEFAULT);
+  if (isset($pseudoM),isset($mailM),isset($mdpM)){
+    $numM= count($DAO->getMembres())+1;
+    $pass_hache = password_hash($_POST['mdpM'], PASSWORD_DEFAULT);
 
-  $DAO->insertMembre($numM,$pseudoM,$mailM,$mdpM);
+    $DAO->insertMembre($numM,$pseudoM,$mailM,$mdpM);
+  }
+
 
   include('../view/inscription.view.php');
 
