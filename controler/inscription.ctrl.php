@@ -21,8 +21,8 @@
     if($mdpM == $mdpVerif && !empty($pseudo)){
       $DAO->insertMembre($numM,$pseudoM,$mailM,$mdpM);
       include('../view/inscription_verif.view.php?pb=0');
-    } else () {
-      include('../view/inscription_verif.view.php?pb=1');    
+    } else {
+      include('../view/inscription_verif.view.php?pb=1');
     }
 
 
