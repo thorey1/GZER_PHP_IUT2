@@ -25,13 +25,13 @@
     <h3>Votre annonce</h3>
     Catégorie
     <br><br>
-    <?php if (((isset($_GET['categorie']) && $_GET['categorie'] == 'Prestation') && isset($_GET['style']) && isset($_GET['titre']) && isset($_GET['prix']) && isset($_GET['localisation'])) || ((isset($_GET['categorie']) && $_GET['categorie'] != 'Prestation') && (isset($_GET['style']) && $_GET['style'] == '') && isset($_GET['titre']) && isset($_GET['prix']) && isset($_GET['localisation']))) {
-      $redirection = "../view/annonce_deposee.view.php";
-    } else {
-      $redirection = "deposer_annonce.ctrl.php";
-    }
-    var_dump($redirection);
-    ?>
+    <?php if ((($categorie) && $_GET['categorie'] == 'Prestation') && isset($_GET['style']) && isset($_GET['titre']) && isset($_GET['prix']) && isset($_GET['localisation'])) ?>
+    <?php || (((isset($_GET['categorie']) && $_GET['categorie'] != 'Prestation') && (isset($_GET['style']) && $_GET['style'] == '') && isset($_GET['titre']) && isset($_GET['prix']) && isset($_GET['localisation']))) { ?>
+    <?php  $redirection = "../view/annonce_deposee.view.php"; ?>
+    <?php } else { ?>
+    <?php  $redirection = "deposer_annonce.ctrl.php"; ?>
+    <?php } ?>
+
     <form action="<?= $redirection ?>">
       <select id="categorie" name="categorie">
         <option value="Prestation">Prestation</option>
