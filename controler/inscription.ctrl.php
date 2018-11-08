@@ -36,10 +36,7 @@
 
 
   } else {
-<<<<<<< HEAD
-=======
 
->>>>>>> 29b43789500e895c6491356e3d1dddf0ffde1681
     include('../view/inscription.view.php');
   }
 
