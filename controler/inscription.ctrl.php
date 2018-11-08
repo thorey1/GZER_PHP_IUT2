@@ -36,11 +36,8 @@
 
 
   } else {
-<<<<<<< HEAD
+
     include('../view/inscription.view.php');
-=======
-    include('../view/inscriptio.view.php');
->>>>>>> 0748388b1703ffe82262105e22b549506cab0c80
   }
 
 
