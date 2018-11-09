@@ -1,5 +1,5 @@
 CREATE TABLE annonces (
-  numA INTEGER,
+  numA INTEGER primary key,
   titreA STRING,
   prixA INTEGER,
   localisationA STRING,
@@ -33,7 +33,7 @@ CREATE TABLE annoncesPrest (
 
 
 CREATE TABLE membres (
-  numM INTEGER,
+  numM INTEGER primary key,
   pseudoM STRING,
   mailM STRING,
   mdpM STRING

@@ -26,7 +26,6 @@
     <br><br>
     <form action="annonces.ctrl.php">
 
-      <!-- <input type="text" name="mot-cle" value=""><br><br> -->
       <select id="categorie" name="categorie">
         <option value="" selected>Séléctionner une catégorie</option>
         <option value="Casques et enceintes">Casques et enceintes</option>
