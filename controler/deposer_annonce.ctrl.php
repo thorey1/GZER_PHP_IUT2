@@ -51,8 +51,13 @@ $num = count($DAO->getAnnonces())+1;
 
 $date = date("j/m/Y");
 
+session_start();
+if (isset($_SESSION["newsession"])) {
+  $auteur = $_SESSION["newsession"];
+} else {
+  $connecte = 0;
+}
 
-$auteur = "";
 
 
 
@@ -63,7 +68,10 @@ $auteur = "";
 
 if (($categorie == 'Prestation' && $style != '' && $titre != '' && $prix != '' && $localisation != '') || ($categorie != 'Prestation' && $style == '' && $titre != '' && $prix != '' && $localisation != '')) {
   include('../view/annonce_deposee.view.php');
-} else {
+} else if (isset($connecte)) {
+  include('seconnecter.ctrl.php');
+}
+else {
   include('../view/deposer_annonce.view.php');
 }
 ?>

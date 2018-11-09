@@ -8,69 +8,22 @@ require_once('../model/GzerDAO.class.php');
 // PARTIE USAGE DU MODELE
 //////////////////////////////////////////////////////////////////////////////
 
-// Récupération des informations de la query string
-if ((isset($_GET['pseudo'])) && (isset($_GET['mdp']))) {
-  $pseudo = $_GET['pseudo'];
-  $mdp = $_GET['mdp'];
+$config = parse_ini_file('../config/config.ini');
+$DAO = new GzerDAO($config['database_path']);
 
-  $config = parse_ini_file('../config/config.ini');
-  $annonces = new GzerDAO($config['database_path']);
-
-  $i = 0;
-  $membres = getMembres();
-  $trouve = false;
-
-
-  while ($i < count($membres) || !$trouve){
-    $user = getMembre($i);
-    if (($user->pseudo == $pseudo) && ($user->mdp == $mdp)) {
-      session_start ();
-      $_SESSION['pseudo'] = $pseudo;
-      $_SESSION['mdp'] = $mdp;
-
-      $trouve=true;
-
-      header('../view/main.view.html');
-
-    }
-
+if(empty($_POST["pseudoM"]) || empty($_POST["mdpM"])) {
+  $message = '<label>Tous les champs sont requis</label>';
+} else {
+  $membreCo = $DAO->getMembreConnexion($_POST["pseudoM"], $_POST["mdpM"]);
+  if(($membreCo != NULL) && ($membreCo->getPseudoM() == $_POST["pseudoM"])) {
+    echo 'connecté';
+    session_start();
+    $_SESSION["newsession"] = $_POST["pseudoM"];
+    header('Location: ../index.php');
+  } else {
+    $message = "<label>Les informations n'ont pas permis de vous identifier</label>";
   }
-  /*
-  else {
-    echo ' La combinaison pseudo, mot de passe est erronée';
-  }
-  */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
-
-
-
-
-
+include('../view/connexion.view.php');
 ?>

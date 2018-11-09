@@ -9,6 +9,10 @@ class Membre {
   public function getMailM() {
     return $this->mailM;
   }
+
+  public function getpseudoM() {
+    return $this->pseudoM;
+  }
 }
 
 ?>

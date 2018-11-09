@@ -74,9 +74,13 @@ class GzerDAO {
   }
 
   public function getMembreParPseudo(string $pseudoM):Membre{
-    $req = "SELECT * FROM membres WHERE pseudoM = '$pseudoM'";
-    $st = $this->getDb()->query($req);
-    $result=$st->fetchAll(PDO::FETCH_CLASS, 'Membre');
+    if ($pseudoM != '') {
+      $req = "SELECT * FROM membres WHERE pseudoM = '$pseudoM'";
+      $st = $this->getDb()->query($req);
+      $result=$st->fetchAll(PDO::FETCH_CLASS, 'Membre');
+    } else {
+      echo '<p>Auteur inconnu</p>';
+    }
 
     return $result[0];
   }
@@ -110,5 +114,17 @@ class GzerDAO {
     ]);
     return $this->getDb()->lastInsertId();
   }
+
+  public function getMembreConnexion(string $pseudoM, string $mdpM) {
+      $req = "SELECT * FROM membres WHERE pseudoM = '$pseudoM' AND mdpM = '$mdpM'";
+      $st = $this->getDb()->query($req);
+      $result=$st->fetchAll(PDO::FETCH_CLASS, 'Membre');
+      if ($result != NULL) {
+        return $result[0];
+      } else {
+        return NULL;
+      }
+  }
+
 }
 ?>

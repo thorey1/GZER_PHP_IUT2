@@ -12,6 +12,7 @@
     <a href="../controler/annonces.ctrl.php">Annonces</a>
     <a href="../controler/seconnecter.ctrl.php">Se connecter</a>
     <a href="../controler/inscription.ctrl.php">Inscription</a>
+    <a href="../controler/deconnexion.ctrl.php">Se déconnecter</a>
   </div>
 
   <div class="navbar">
@@ -38,7 +39,7 @@
       <br><br>
       Style pour une annonce de prestation
       <br><br>
-      Laisser ce champ vide s'il s'agit d'une prestation !
+      Laisser ce champ vide s'il ne s'agit pas d'une prestation !
       <br>
       <select id="style" name="style">
         <option value="" selected></option>

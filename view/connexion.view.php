@@ -13,6 +13,7 @@
     <a href="../controler/annonces.ctrl.php">Annonces</a>
     <a class="active" href="../controler/seconnecter.ctrl.php">Se connecter</a>
     <a href="../controler/inscription.ctrl.php">Inscription</a>
+    <a href="../controler/deconnexion.ctrl.php">Se déconnecter</a>
   </div>
 
   <div class="navbar">
@@ -25,15 +26,15 @@
 
       <h1>Connectez-vous ici</h1>
 
-      <form action="../controler/seconnecter.ctrl.php">
+      <form action="../controler/seconnecter.ctrl.php" method="post">
 
         <p>Pseudo</p>
 
-        <input type="text" name="pseudo" placeholder="Entrer le pseudo">
+        <input type="text" name="pseudoM" placeholder="Entrer le pseudo">
 
         <p>Mot de passe</p>
 
-        <input type="password" name="mdp" placeholder="Entrer le mot de passe">
+        <input type="password" name="mdpM" placeholder="Entrer le mot de passe">
 
         <br><br>
 
@@ -41,9 +42,11 @@
 
         <br><br>
 
-        <a href="?#">Mot de passe oublié ?</a><br>
+        <?php if (isset($message)) { ?>
+          <p><?= $message ?></p>
+        <?php } ?>
 
-        <a href="#">Vous n'avez pas encore de compte ?</a>
+        <a href="../controler/inscription.ctrl.php">Vous n'avez pas encore de compte ?</a>
 
       </form>
 

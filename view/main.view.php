@@ -18,6 +18,7 @@
     <a href="../controler/annonces.ctrl.php">Annonces</a>
     <a href="../controler/seconnecter.ctrl.php">Se connecter</a>
     <a href="../controler/inscription.ctrl.php">Inscription</a>
+    <a href="../controler/deconnexion.ctrl.php">Se déconnecter</a>
   </div>
 
   <div class="navbar">
@@ -95,7 +96,6 @@
         <input type="submit" value="Valider">
       </form>
     </div>
-
   </div>
 
 </body>
