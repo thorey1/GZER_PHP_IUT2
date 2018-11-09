@@ -1,7 +1,5 @@
 <?php
 
-
-
   require_once('../model/Membre.class.php');
   require_once('../model/GzerDAO.class.php');
 
@@ -20,18 +18,21 @@
     $mdpVerif = $_POST['rmdp'];
   }
 
+  if(isset($_POST['mail'])){
+    $mailM = $_POST['mail'];
+  }
 
 
-
-  if (isset($pseudoM) && isset($mailM) && isset($mdpM) && isset($mdpVerif)){
+  if (isset($pseudoM) && $pseudoM != '' && isset($mailM) && $mailM != '' && isset($mdpM) && $mdpM != '' && isset($mdpVerif) && $mdpVerif != ''){
     $numM= count($DAO->getMembres())+1;
-    $pass_hache = password_hash($_POST['mdpM'], PASSWORD_DEFAULT);
+    $pass_hache = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
 
-    if($mdpM == $mdpVerif && !empty($pseudo)){
-      $DAO->insertMembre($numM,$pseudoM,$mailM,$mdpM);
-      include('../view/inscription_verif.view.php?pb=0');
+    if(($mdpM == $mdpVerif) && !empty($pseudoM)){
+	$pb = 0;
+      	include('../view/inscription_verif.view.php');	
     } else {
-      include('../view/inscription_verif.view.php?pb=1');
+	$pb = 1;
+      	include('../view/inscription_verif.view.php');	
     }
 
 
@@ -39,18 +40,5 @@
 
     include('../view/inscription.view.php');
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   ?>
